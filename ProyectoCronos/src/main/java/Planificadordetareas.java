@@ -50,3 +50,5 @@ public static int calcularCargaOptima(int[] duraciones, int[] disponibilidadTrip
     }
     return cargaOptima;
 }
+}
+
