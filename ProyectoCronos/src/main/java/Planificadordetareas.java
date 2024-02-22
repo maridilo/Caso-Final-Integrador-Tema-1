@@ -43,5 +43,10 @@ public class Planificadordetareas {
         }
         System.out.println();
     }
-
+public static int calcularCargaOptima(int[] duraciones, int[] disponibilidadTripulacion) {
+    int cargaOptima = 0;
+    for (int i = 0; i < duraciones.length; i++) {
+        cargaOptima += duraciones[i];
+    }
+    return cargaOptima;
 }
