@@ -18,4 +18,30 @@ public class Planificadordetareas {
         System.out.println("La carga de trabajo óptima es: " + cargaOptima + " minutos");
     }
 
+    public static ArrayList<String>[] distribuirTareas(String[] tareas, int[] duraciones) {
+        // Crear horarios para cada tripulante
+        int numMiembrosTripulacion = 5;
+        ArrayList<String>[] horarios = new ArrayList[numMiembrosTripulacion];
+        for (int i = 0; i < numMiembrosTripulacion; i++) {
+            horarios[i] = new ArrayList<>();
+        }
+
+        // Distribuir tareas de forma equitativa
+        int indiceMiembro = 0;
+        for (int i = 0; i < tareas.length; i++) {
+            horarios[indiceMiembro].add(tareas[i]);
+            indiceMiembro = (indiceMiembro + 1) % numMiembrosTripulacion;
+        }
+
+        return horarios;
+    }
+
+    public static void visualizarHorarios(ArrayList<String>[] horarios) {
+        System.out.println("Horarios y cargas de trabajo:");
+        for (int i = 0; i < horarios.length; i++) {
+            System.out.println("Tripulante " + (i + 1) + ": " + horarios[i]);
+        }
+        System.out.println();
+    }
+
 }
