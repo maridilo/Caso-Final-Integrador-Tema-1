@@ -38,11 +38,11 @@ public void recibirMensajes(String mensaje) {
         return conteo;
     }
     private String invertirMensaje(String mensaje) {
-        String mensajeInvertido = "";
+        StringBuilder mensajeInvertido = new StringBuilder();
         for (int i = mensaje.length() - 1; i >= 0; i--) {
-            mensajeInvertido += mensaje.charAt(i);
+            mensajeInvertido.append(mensaje.charAt(i));
         }
-        return mensajeInvertido;
+        return mensajeInvertido.toString();
     }
     private boolean verificarPalindromo(String mensaje) {
         String mensajeLimpio = mensaje.toLowerCase().replaceAll("[^a-z]", "");

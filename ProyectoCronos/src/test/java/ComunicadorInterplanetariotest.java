@@ -2,8 +2,6 @@ import ejercicios.ComunicadorInterplanetario;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-
-
 @Test
 public void testEnviarMensaje() {
     ComunicadorInterplanetario comunicador = new ComunicadorInterplanetario();

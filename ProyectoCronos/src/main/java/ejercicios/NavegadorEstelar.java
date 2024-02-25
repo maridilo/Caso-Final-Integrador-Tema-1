@@ -55,4 +55,16 @@ public static int[][] multiplicarMatrices(int[][] matriz1, int[][] matriz2) {
     }
     return resultado;
 }
+
+
+    public boolean calcularRutasOptimas() {
+        return false;
+    }
+    public boolean generarRutaOptima() {
+        return false;
+    }
+    public boolean calcularMatrices(Object datos) {
+        return false;
+    }
 }
+
