@@ -66,3 +66,4 @@ public void recibirMensajes(String mensaje) {
         comunicador.visualizarMensajes();
     }
 }
+// Path: ProyectoCronos/src/main/java/ComunicadorInterplanetario.java
