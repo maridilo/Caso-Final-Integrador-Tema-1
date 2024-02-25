@@ -7,9 +7,9 @@ public ComunicadorInterplanetario() {
 }
 public void enviarMensaje(String mensaje) {
     // Simular envio de mensaje desde la Tierra a la base espacial
-    mensajes.add(traducirmensaje(mensaje));
+    mensajes.add(traducirMensaje(mensaje));
 }
-public void recibirMensajes() {
+public void recibirMensajes(String mensaje) {
     // Simular recepcion de mensajes en la base espacial
     mensajes.add(traducirMensaje(mensaje));
     }
@@ -19,6 +19,50 @@ public void recibirMensajes() {
         String mensajeInvertido = invertirMensaje(mensaje);
         boolean esPalindromo = verificarPalindromo(mensaje);
 
-
+// Crear mensaje traducido
+        String mensajeTraducido = "Mensaje original: " + mensaje;
+        mensajeTraducido += "\nConteo de vocales: " + conteoVocales;
+        mensajeTraducido += "\nMensaje invertido: " + mensajeInvertido;
+        mensajeTraducido += "\nEs palindromo: " + esPalindromo;
+        return mensajeTraducido;
+    }
+    private int contarVocales(String mensaje) {
+        int conteo = 0;
+        for (char letra : mensaje.toCharArray()) {
+            if ("aeiouAEIOU".indexOf(letra) != -1) {
+                conteo++;
+            }
+        }
+        return conteo;
+    }
+    private String invertirMensaje(String mensaje) {
+        String mensajeInvertido = "";
+        for (int i = mensaje.length() - 1; i >= 0; i--) {
+            mensajeInvertido += mensaje.charAt(i);
+        }
+        return mensajeInvertido;
+    }
+    private boolean verificarPalindromo(String mensaje) {
+        String mensajeLimpio = mensaje.toLowerCase().replaceAll("[^a-z]", "");
+        String mensajeInvertido = invertirMensaje(mensajeLimpio);
+        for (int i = 0; i < mensajeLimpio.length() / 2; i++) {
+            if (mensajeLimpio.charAt(i) != mensajeInvertido.charAt(mensajeLimpio.length() - i - 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public void visualizarMensajes() {
+        System.out.println("Mensajes recibidos:");
+        for (String mensaje : mensajes) {
+            System.out.println(mensaje);
+        }
+    }
+    public static void main(String[] args) {
+        ComunicadorInterplanetario comunicador = new ComunicadorInterplanetario();
+        comunicador.enviarMensaje("Hola, ¿cómo están?");
+        comunicador.enviarMensaje("¿Cuál es la situación en Marte?");
+        comunicador.recibirMensajes("Todo bien, gracias");
+        comunicador.visualizarMensajes();
     }
 }
