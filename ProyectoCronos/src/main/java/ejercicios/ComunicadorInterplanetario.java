@@ -1,3 +1,5 @@
+package ejercicios;
+
 import java.util.ArrayList;
 
 public class ComunicadorInterplanetario {
@@ -66,4 +68,4 @@ public void recibirMensajes(String mensaje) {
         comunicador.visualizarMensajes();
     }
 }
-// Path: ProyectoCronos/src/main/java/ComunicadorInterplanetario.java
+// Path: ProyectoCronos/src/ejercicios.main/java/ejercicios.ComunicadorInterplanetario.java

@@ -1,3 +1,5 @@
+package ejercicios;
+
 public class NavegadorEstelar {
     public static void main(String[] args) {
         // Definicion del terreno y obstáculos mediante matrices

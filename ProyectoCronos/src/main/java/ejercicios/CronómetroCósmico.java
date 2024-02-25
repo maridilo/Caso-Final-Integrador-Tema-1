@@ -1,3 +1,5 @@
+package ejercicios;
+
 public class CronómetroCósmico {
 private static final double DURACIÓN_DÍA_TIERRA = 24 * 60 * 60;
 private static final double DURACIÓN_AÑO_TIERRA = 365.25 * DURACIÓN_DÍA_TIERRA;

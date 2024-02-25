@@ -1,3 +1,5 @@
+package ejercicios;
+
 public class RecursosySuministros {
     private static final int Dias_de_la_semana = 7;
     private static final int Dias_del_mes = 30;
